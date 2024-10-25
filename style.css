@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+
+    margin: 0;
+    padding: 0;
+
+    font-family: "Fredoka", sans-serif;
+    font-style: normal;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    padding: 0;
+    margin: 0;
+}
+.containerBoard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 500px;
+    height: 500px;
+
+    margin: 0 auto;
+
+    gap: 0;
+}
+
+
+.btn {
+    background-color: rgba(255, 255, 255, 0);
+
+    padding: 0 0 25px 0;
+
+    font-size: 100px;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 600;
+
+    color:white;
+
+    width: 166.65625px;
+    height: 166.65625px;
+
+    transition: .5s;
+}
+
+.c1 {
+    border: solid #DEDEDE;
+    border-width: 0 3px 3px 0;
+}
+.c2 {
+    border: solid #DEDEDE;
+    border-width: 0 3px 3px 3px;
+}
+.c3 {
+    border: solid #DEDEDE;
+    border-width: 0 0 3px 3px;
+}
+
+.c4 {
+    border: solid #DEDEDE;
+    border-width: 3px 3px 3px 0;
+}
+.c5 {
+    border: solid #DEDEDE;
+    border-width: 3px 3px 3px 3px;
+}
+.c6 {
+    border: solid #DEDEDE;
+    border-width: 3px 0 3px 3px;
+}
+
+.c7 {
+    border: solid #DEDEDE;
+    border-width: 3px 3px 0 0;
+}
+.c8 {
+    border: solid #DEDEDE;
+    border-width: 3px 3px 0 3px;
+}
+.c9 {
+    border: solid #DEDEDE;
+    border-width: 3px 0 0 3px;
+}
+
+
+.winCx {
+    animation: winnerX .2s ease-in-out infinite alternate;
+}
+
+@keyframes winnerX {
+    from {
+        color: rgba(230, 57, 70, 1);
+    } to {   
+        color: rgba(230, 57, 70, 0.5);
+    }
+}
+
+.winCo {
+    animation: winnerO .2s ease-in-out infinite alternate;
+}
+
+@keyframes winnerO {
+    from {
+        color: rgba(22, 127, 236, 1);
+    } to {   
+        color: rgba(22, 127, 236, 0.5);
+    }
+}
+
+@keyframes tremble {
+    to {
+        transform: rotate(45deg);
+    }
+}
+
+.containerPoint {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+}
+
+.containerPoint p {
+    font-weight: 700;
+
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+}
+.containerPoint p:first-child {
+    font-size: 48px;
+}
+
+.containerPoint p:last-child {
+    font-size: 21px;
+}
+
+.circle, .pointO {
+    color: rgba(22, 127, 236, 1);
+}
+.cross, .pointX {
+    color: rgba(230, 57, 70, 1);
+}
+
+.resetBtn {
+    position: relative;
+    border: none;
+
+    background-color: #dedede00;
+
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+
+    justify-content: center;
+
+    top: -50px;
+    transition: 1s;
+}
+.resetBtn svg {
+    width: 100%;
+    height: 100%;
+}
+.resetBtnAnimation {
+    animation: rotation .5s ease-out alternate;
+    animation-iteration-count: 2;
+}
+@keyframes rotation {
+    
+    to {
+        transform: rotate(-90deg);
+    }
+}

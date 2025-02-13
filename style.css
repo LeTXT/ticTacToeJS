@@ -2,6 +2,8 @@
 * {
     margin: 0;
     padding: 0;
+
+    box-sizing: border-box;
 }
 html, body {
     width: 100vw;
@@ -20,6 +22,8 @@ html, body {
     justify-content: space-around;
     align-items: center;
 
+    gap: 10% 0;
+
     width: 100vw;
     height: 100vh;
 
@@ -36,7 +40,7 @@ html, body {
     justify-content: center;
     align-items: center;
 
-    margin: 20% 0 0 0;
+    /* margin: 20% 0 0 0; */
 
     gap: 0;
 }
@@ -159,14 +163,15 @@ html, body {
     color: rgba(230, 57, 70, 1);
 }
 
-.containerBtn {
+.containerResetBtn {
     width: 100%;
-    height: 100%;
+    height:100%;
 
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
 }
+
 
 .resetBtn {
     

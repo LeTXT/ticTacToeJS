@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
-
+* {
+    margin: 0;
+    padding: 0;
+}
 html, body {
     width: 100vw;
     height: 100vh;
@@ -17,20 +20,23 @@ html, body {
     justify-content: space-around;
     align-items: center;
 
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 
     padding: 0;
     margin: 0;
 }
+
 .containerBoard {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
 
-    width: 500px;
-    height: 500px;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
 
-    margin: 0 auto;
+    margin: 20% 0 0 0;
 
     gap: 0;
 }
@@ -39,56 +45,52 @@ html, body {
 .btn {
     background-color: rgba(255, 255, 255, 0);
 
-    padding: 0 0 25px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    font-size: 100px;
+    padding-bottom: 25px;
+
+    font-size: clamp(6rem, 100px, 7rem);
     font-family: "Fredoka", sans-serif;
     font-weight: 600;
 
-    color:white;
+    color: white;
 
-    width: 166.65625px;
-    height: 166.65625px;
+    width: clamp(7rem, 30vw, 10.4rem);
+    height: clamp(7rem, 30vw, 10.4rem);
 
     transition: .5s;
+    border: solid #DEDEDE;
 }
 
 .c1 {
-    border: solid #DEDEDE;
     border-width: 0 3px 3px 0;
 }
 .c2 {
-    border: solid #DEDEDE;
     border-width: 0 3px 3px 3px;
 }
 .c3 {
-    border: solid #DEDEDE;
     border-width: 0 0 3px 3px;
 }
 
 .c4 {
-    border: solid #DEDEDE;
     border-width: 3px 3px 3px 0;
 }
 .c5 {
-    border: solid #DEDEDE;
     border-width: 3px 3px 3px 3px;
 }
 .c6 {
-    border: solid #DEDEDE;
     border-width: 3px 0 3px 3px;
 }
 
 .c7 {
-    border: solid #DEDEDE;
     border-width: 3px 3px 0 0;
 }
 .c8 {
-    border: solid #DEDEDE;
     border-width: 3px 3px 0 3px;
 }
 .c9 {
-    border: solid #DEDEDE;
     border-width: 3px 0 0 3px;
 }
 
@@ -167,7 +169,7 @@ html, body {
 }
 
 .resetBtn {
-    position: relative;
+    
     border: none;
 
     background-color: #dedede00;
@@ -179,7 +181,7 @@ html, body {
 
     justify-content: center;
 
-    top: -50px;
+   
     transition: 1s;
 }
 .resetBtn svg {
